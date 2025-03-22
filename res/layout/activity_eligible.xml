@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#E49C9C"
+tools:context=".eligible">
+
+<!-- Existing Views -->
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="96dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="Age:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumberSigned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+    <EditText
+    android:id="@+id/editTextNumberSigned"
+    android:layout_width="294dp"
+    android:layout_height="53dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    android:ems="10"
+    android:inputType="numberSigned"
+    app:layout_constraintBottom_toTopOf="@+id/etWeight"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/textView15"
+    app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+<EditText
+    android:id="@+id/etWeight"
+    android:layout_width="302dp"
+    android:layout_height="46dp"
+    android:layout_below="@id/textView15"
+    android:layout_marginStart="19dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="1dp"
+    android:hint="Enter weight (kg)"
+    android:inputType="numberDecimal"
+    app:layout_constraintBottom_toTopOf="@+id/etLastDonation"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/textView9"
+    app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned" />
+
+    <EditText
+        android:id="@+id/etLastDonation"
+        android:layout_width="275dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/etWeight"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="41dp"
+        android:hint="Enter months since last donation"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/etWeight" />
+
+    <CheckBox
+    android:id="@+id/cbChronicDiseases"
+    android:layout_width="347dp"
+    android:layout_height="62dp"
+    android:layout_below="@id/etLastDonation"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="10dp"
+    android:text="Do you have chronic diseases?"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    app:layout_constraintBottom_toTopOf="@+id/checkBox3"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.593"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="86dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="Weight:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/etWeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned"
+        app:layout_constraintVertical_bias="0.347" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="122dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="In Months:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+        app:layout_constraintEnd_toStartOf="@+id/etLastDonation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etWeight" />
+
+<CheckBox
+    android:id="@+id/checkBox"
+    android:layout_width="341dp"
+    android:layout_height="60dp"
+    android:layout_marginStart="38dp"
+    android:layout_marginTop="14dp"
+    android:layout_marginEnd="32dp"
+    android:text="Do You Smoke or Drink?"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    app:layout_constraintBottom_toTopOf="@+id/cbChronicDiseases"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+<Button
+    android:id="@+id/submitButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="-2dp"
+    android:layout_marginBottom="16dp"
+    android:background="#932424"
+    android:backgroundTint="#771A1A"
+    android:backgroundTintMode="screen"
+    android:drawableTint="#8F2929"
+    android:fontFamily="@font/archivo_black"
+    android:foregroundTint="#2B0F0F"
+    android:shadowColor="#702A2A"
+    android:text="check"
+    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+    android:textColor="#131111"
+    android:textColorHighlight="#DC7474"
+    android:textColorLink="#C53B3B"
+    app:iconTint="#E91E63"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+
+<CheckBox
+    android:id="@+id/checkBox2"
+    android:layout_width="367dp"
+    android:layout_height="64dp"
+    android:layout_marginStart="37dp"
+    android:layout_marginTop="36dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="24dp"
+    android:text="Haemoglobin level greater than 12.5"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    app:layout_constraintBottom_toTopOf="@+id/checkBox"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+<ImageButton
+    android:id="@+id/imageButton"
+    android:layout_width="319dp"
+    android:layout_height="108dp"
+    android:layout_marginTop="16dp"
+    app:layout_constraintBottom_toTopOf="@+id/editTextNumberSigned"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.532"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0"
+    app:srcCompat="@drawable/know" />
+
+<TextView
+    android:id="@+id/textView5"
+    android:layout_width="193dp"
+    android:layout_height="36dp"
+    android:text="ARE YOU"
+    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+    app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+    app:layout_constraintEnd_toEndOf="@+id/imageButton"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="@+id/imageButton"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0" />
+
+<CheckBox
+    android:id="@+id/checkBox3"
+    android:layout_width="361dp"
+    android:layout_height="57dp"
+    android:layout_marginStart="42dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="48dp"
+    android:text="Had tatto or piercing in the last 3 months"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    app:layout_constraintBottom_toTopOf="@+id/submitButton"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/cbChronicDiseases" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
